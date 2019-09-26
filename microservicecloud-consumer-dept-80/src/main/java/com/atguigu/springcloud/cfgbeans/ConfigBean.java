@@ -2,6 +2,7 @@ package com.atguigu.springcloud.cfgbeans;
 
 import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.RetryRule;
+import com.netflix.loadbalancer.RoundRobinRule;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
  */
 @Configuration
 public class ConfigBean {
-    @Bean(name = "restTemplate")
+    @Bean
     @LoadBalanced//springcloud ribbon是基于netflix实现的一套客户端负载均衡的工具
     public RestTemplate getRestTemplate(){
         return new RestTemplate();
@@ -40,6 +41,6 @@ public class ConfigBean {
      */
     @Bean
    public IRule myRule(){
-        return new RetryRule();
+        return new RoundRobinRule();
    }
 }
