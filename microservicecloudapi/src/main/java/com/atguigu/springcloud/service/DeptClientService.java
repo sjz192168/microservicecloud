@@ -15,7 +15,7 @@ public interface DeptClientService {
     public boolean add(@RequestBody Dept dept);
 
     @RequestMapping(value="/dept/get/{id}",method = RequestMethod.GET)
-    public Dept add(@PathVariable("id") Long id);
+    public Dept get(@PathVariable("id") Long id);
 
     @RequestMapping(value="/dept/list",method = RequestMethod.GET)
     public List<Dept> list();
