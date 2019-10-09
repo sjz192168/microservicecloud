@@ -3,7 +3,7 @@ server:
 
 feign:
   hystrix:
-    enable: true
+    enabled: true
 eureka:
   client:     #客户端注册进eureka服务列表内
     register-with-eureka: false
