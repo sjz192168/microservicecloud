@@ -1,0 +1,13 @@
+.project
+.settings/
+microservicecloudapi/.classpath
+microservicecloudapi/target/
+microservicecloud-consumer-dept-80/.classpath
+microservicecloud-consumer-dept-80/target/
+*.classpath
+microservicecloud-consumer-dept-feign/target/
+microservicecloud-eureka-7001/target/
+microservicecloud-eureka-7002/target/
+microservicecloud-eureka-7003/target/
+microservicecloud-provider-dept-8003/target/
+microservicecloud-provider-dept-hystrix-8001/target/
